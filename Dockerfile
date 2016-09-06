@@ -15,7 +15,7 @@ RUN npm install && \
     bower install -F --allow-root --config.interactive=false
 COPY . /usr/src/app
 
-ENV GULP_COMMAND serve
+ENV GULP_COMMAND serve:dist
 
 ENTRYPOINT ["sh", "-c"]
 CMD ["gulp $GULP_COMMAND"]
